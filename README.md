@@ -10,3 +10,4 @@ horizontal and vertical scroll
             }
         });
 #Resut
+![ScreenShot](https://github.com/sangcomz/Multiplexscrollrecyclerview/blob/master/image/image.png)
