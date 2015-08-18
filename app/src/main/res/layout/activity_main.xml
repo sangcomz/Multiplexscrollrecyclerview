@@ -1,0 +1,47 @@
+<!--디자인에 관한 링크 http://googledevkr.blogspot.kr/2014/10/appcompat-v21-material-design-for-pre.html -->
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_above="@+id/bottom_bar"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--https://developer.android.com/reference/android/support/design/widget/CoordinatorLayout.html-->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/viewpager"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"></RelativeLayout>-->
+    <!--&lt;!&ndash;http://developer.android.com/reference/android/support/v4/view/ViewPager.html&ndash;&gt;-->
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!--https://developer.android.com/reference/android/support/design/widget/AppBarLayout.html-->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--https://developer.android.com/reference/android/support/design/widget/TabLayout.html-->
+
+    </android.support.design.widget.AppBarLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>
