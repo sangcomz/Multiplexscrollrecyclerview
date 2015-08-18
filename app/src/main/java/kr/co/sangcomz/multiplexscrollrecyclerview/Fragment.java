@@ -14,7 +14,6 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 
@@ -22,9 +21,6 @@ import java.util.Random;
  * A simple {@link android.support.v4.app.Fragment} subclass.
  */
 public class Fragment extends android.support.v4.app.Fragment {
-
-    static ArrayList<String> value= new ArrayList<>();
-
     LinearLayoutManager linearLayoutManager;
     RecyclerViewAdapter recyclerViewAdapter;
     RecyclerView recyclerView;
@@ -57,18 +53,6 @@ public class Fragment extends android.support.v4.app.Fragment {
         recyclerViewAdapter = new RecyclerViewAdapter(getActivity());
         recyclerView.setAdapter(recyclerViewAdapter);
     }
-
-
-    private static ArrayList<String> getRandomSublist(String[] array, int amount) {
-        ArrayList<String> list = new ArrayList<>(amount);
-        Random random = new Random();
-        while (list.size() < amount) {
-            list.add(array[random.nextInt(array.length)]);
-        }
-        return list;
-    }
-
-
 
     public static class RecyclerViewAdapter
             extends RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder> {

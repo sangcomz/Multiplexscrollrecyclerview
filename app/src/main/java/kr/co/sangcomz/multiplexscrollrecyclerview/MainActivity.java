@@ -10,7 +10,6 @@ import android.support.v7.widget.Toolbar;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
      * viewPager에 adapter를 설정해준다.
      */
     public void setUpViewPager(ViewPager viewPager, MainFragmentAdapter mainFragmentAdapter) {
-        mainFragmentAdapter.addFragment(new Fragment(), "하나"); //adapter에 Fragment를 더해준다.
-        mainFragmentAdapter.addFragment(new Fragment(), "두울"); //adapter에 Fragment를 더해준다.
-        mainFragmentAdapter.addFragment(new Fragment(), "세엣"); //adapter에 Fragment를 더해준다.
+        mainFragmentAdapter.addFragment(new Fragment(), "One"); //adapter에 Fragment를 더해준다.
+        mainFragmentAdapter.addFragment(new Fragment(), "Two"); //adapter에 Fragment를 더해준다.
+        mainFragmentAdapter.addFragment(new Fragment(), "Three"); //adapter에 Fragment를 더해준다.
         viewPager.setAdapter(mainFragmentAdapter);
         tabLayout.setupWithViewPager(viewPager);
     }
