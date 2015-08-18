@@ -163,7 +163,7 @@ public class Fragment extends android.support.v4.app.Fragment {
         public void onBindViewHolder(final ViewHolder holder, int position) {
 
             Glide.with(holder.mImageView.getContext())
-                    .load(Cheeses.getRandomCheeseDrawable())
+                    .load(getAnimalImage())
                     .fitCenter()
                     .into(holder.mImageView);
         }
@@ -174,4 +174,20 @@ public class Fragment extends android.support.v4.app.Fragment {
         }
     }
 
+    public static int getAnimalImage() {
+        final Random RANDOM = new Random();
+        switch (RANDOM.nextInt(5)) {
+            default:
+            case 0:
+                return R.mipmap.image_1;
+            case 1:
+                return R.mipmap.image_2;
+            case 2:
+                return R.mipmap.image_3;
+            case 3:
+                return R.mipmap.image_4;
+            case 4:
+                return R.mipmap.image_5;
+        }
+    }
 }
